@@ -1,0 +1,28 @@
+.memos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memo-paper {
+    background-color: #0099cc;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .memos-container {
+        padding: 0 10px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .memo-paper {
+        flex-direction: column;
+        /* Stack content in smaller screens */
+    }
+}
