@@ -2,9 +2,11 @@ import abi from "./contracts/Project.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Buy from "./components/Buy";
+import Footer from "./components/Footer";
 import Memos from "./components/Memos";
 import { CssBaseline, ThemeProvider, Switch, Typography } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+
 
 import "./App.css";
 
@@ -86,12 +88,15 @@ function App() {
           class="text-muted lead "
           style={{ marginTop: "10px", marginLeft: "5px" }}
         >
-          <small>Connected Account - {account}</small>
+          <small style={{ display: 'block', margin: '0 auto' }}>
+            Connected Account - {account}
+          </small>
         </p>
         <div className="container">
           <Buy state={state} />
           <Memos state={state} darkMode={darkMode} />
         </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );

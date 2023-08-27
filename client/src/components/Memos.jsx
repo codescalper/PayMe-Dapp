@@ -19,15 +19,18 @@ const Memos = ({ state, darkMode }) => {
             {memos.map((memo) => (
                 <Paper
                     key={Math.random()}
-                    elevation={10}
+                    elevation={13}
                     className="memo-paper"
+                    style={{
+                        backgroundColor: darkMode ? '#3297a8' : '#ff884d',
+                    }}
                 >
-                    <div>
+                    <div style={{ padding: 10 }}>
                         <p><b>Name:</b> {memo.name}</p>
                         <p>{new Date(memo.timestamp * 1000).toLocaleString()}</p>
                     </div>
-                    <div>
-                        <p><b>Message:</b> {memo.message}</p>
+                    <div style={{ padding: 10 }}>
+                        <p><b>Message: </b> {memo.message}</p>
                         <p>{memo.from}</p>
                     </div>
                 </Paper>

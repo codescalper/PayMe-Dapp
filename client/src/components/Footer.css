@@ -1,0 +1,15 @@
+.footer {
+    background-color: black;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.icon-button {
+    color: white;
+}
+
+.icon-button:hover {
+    color: red;
+    transition: 0.5s;
+}
