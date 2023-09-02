@@ -96,7 +96,7 @@ function App() {
           <Buy state={state} />
           <Memos state={state} darkMode={darkMode} />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </ThemeProvider>
   );
